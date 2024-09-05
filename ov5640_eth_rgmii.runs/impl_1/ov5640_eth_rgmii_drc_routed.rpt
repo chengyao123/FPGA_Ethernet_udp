@@ -1,0 +1,272 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Apr 15 21:30:27 2024
+| Host         : DESKTOP-5JNUKTK running 64-bit major release  (build 9200)
+| Command      : report_drc -file ov5640_eth_rgmii_drc_routed.rpt -pb ov5640_eth_rgmii_drc_routed.pb -rpx ov5640_eth_rgmii_drc_routed.rpx
+| Design       : ov5640_eth_rgmii
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 46
++-----------+------------------+---------------------------------+------------+
+| Rule      | Severity         | Description                     | Violations |
++-----------+------------------+---------------------------------+------------+
+| NSTD-1    | Critical Warning | Unspecified I/O Standard        | 1          |
+| UCIO-1    | Critical Warning | Unconstrained Logical Port      | 1          |
+| CHECK-3   | Warning          | Report rule limit reached       | 2          |
+| REQP-1839 | Warning          | RAMB36 async control check      | 20         |
+| REQP-1840 | Warning          | RAMB18 async control check      | 20         |
+| RPBF-3    | Warning          | IO port buffering is incomplete | 1          |
+| ZPS7-1    | Warning          | PS7 block required              | 1          |
++-----------+------------------+---------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+NSTD-1#1 Critical Warning
+Unspecified I/O Standard  
+25 out of 25 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: camera_data[7:0], eth_txd[3:0], camera_href, camera_pclk, camera_sclk, camera_sdat, camera_vsync, camera_xclk, clk, eth_gtxc, eth_mdc, eth_mdio, eth_rst_n, eth_txen, rst_n (the first 15 of 15 listed).
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+25 out of 25 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: camera_data[7:0], eth_txd[3:0], camera_href, camera_pclk, camera_sclk, camera_sdat, camera_vsync, camera_xclk, clk, eth_gtxc, eth_mdc, eth_mdio, eth_rst_n, eth_txen, rst_n (the first 15 of 15 listed).
+Related violations: <none>
+
+CHECK-3#1 Warning
+Report rule limit reached  
+REQP-1839 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
+CHECK-3#2 Warning
+Report rule limit reached  
+REQP-1840 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
+REQP-1839#1 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRARDADDR[10] (net: eth_udp_send/async_fifo/dpram_inst/wraddress[8]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/wr_pntr_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#2 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRARDADDR[11] (net: eth_udp_send/async_fifo/dpram_inst/wraddress[9]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/wr_pntr_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#3 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRARDADDR[12] (net: eth_udp_send/async_fifo/dpram_inst/wraddress[10]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/wr_pntr_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#4 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRARDADDR[13] (net: eth_udp_send/async_fifo/dpram_inst/wraddress[11]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/wr_pntr_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#5 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRARDADDR[14] (net: eth_udp_send/async_fifo/dpram_inst/wraddress[12]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/wr_pntr_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#6 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRARDADDR[2] (net: eth_udp_send/async_fifo/dpram_inst/wraddress[0]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/wr_pntr_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#7 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRARDADDR[3] (net: eth_udp_send/async_fifo/dpram_inst/wraddress[1]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/wr_pntr_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#8 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRARDADDR[4] (net: eth_udp_send/async_fifo/dpram_inst/wraddress[2]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/wr_pntr_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#9 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRARDADDR[5] (net: eth_udp_send/async_fifo/dpram_inst/wraddress[3]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/wr_pntr_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#10 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRARDADDR[6] (net: eth_udp_send/async_fifo/dpram_inst/wraddress[4]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/wr_pntr_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#11 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRARDADDR[7] (net: eth_udp_send/async_fifo/dpram_inst/wraddress[5]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/wr_pntr_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#12 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRARDADDR[8] (net: eth_udp_send/async_fifo/dpram_inst/wraddress[6]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/wr_pntr_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#13 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRARDADDR[9] (net: eth_udp_send/async_fifo/dpram_inst/wraddress[7]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/wr_pntr_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#14 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRBWRADDR[14] (net: eth_udp_send/async_fifo/dpram_inst/rdaddress[12]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/rd_pntr_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#15 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRBWRADDR[14] (net: eth_udp_send/async_fifo/dpram_inst/rdaddress[12]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/rd_pntr_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#16 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRBWRADDR[14] (net: eth_udp_send/async_fifo/dpram_inst/rdaddress[12]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/rd_pntr_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#17 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRBWRADDR[14] (net: eth_udp_send/async_fifo/dpram_inst/rdaddress[12]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/rd_pntr_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#18 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRBWRADDR[14] (net: eth_udp_send/async_fifo/dpram_inst/rdaddress[12]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/rd_pntr_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#19 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRBWRADDR[14] (net: eth_udp_send/async_fifo/dpram_inst/rdaddress[12]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/rd_pntr_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#20 Warning
+RAMB36 async control check  
+The RAMB36E1 eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 has an input control pin eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0/ADDRBWRADDR[14] (net: eth_udp_send/async_fifo/dpram_inst/rdaddress[12]) which is driven by a register (eth_udp_send/async_fifo/async_fifo_ctrl_inst/rd_pntr_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#1 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRARDADDR[10] (net: camera_init/ov5640_init_table_rgb_inst/Q[6]) which is driven by a register (camera_init/cnt_reg_rep[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#2 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRARDADDR[11] (net: camera_init/ov5640_init_table_rgb_inst/Q[7]) which is driven by a register (camera_init/cnt_reg_rep[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#3 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRARDADDR[4] (net: camera_init/ov5640_init_table_rgb_inst/Q[0]) which is driven by a register (camera_init/cnt_reg_rep[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#4 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRARDADDR[5] (net: camera_init/ov5640_init_table_rgb_inst/Q[1]) which is driven by a register (camera_init/cnt_reg_rep[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#5 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRARDADDR[6] (net: camera_init/ov5640_init_table_rgb_inst/Q[2]) which is driven by a register (camera_init/cnt_reg_rep[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#6 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRARDADDR[7] (net: camera_init/ov5640_init_table_rgb_inst/Q[3]) which is driven by a register (camera_init/cnt_reg_rep[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#7 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRARDADDR[8] (net: camera_init/ov5640_init_table_rgb_inst/Q[4]) which is driven by a register (camera_init/cnt_reg_rep[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#8 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRARDADDR[9] (net: camera_init/ov5640_init_table_rgb_inst/Q[5]) which is driven by a register (camera_init/cnt_reg_rep[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#9 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRBWRADDR[10] (net: camera_init/ov5640_init_table_rgb_inst/Q[6]) which is driven by a register (camera_init/cnt_reg_rep[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#10 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRBWRADDR[11] (net: camera_init/ov5640_init_table_rgb_inst/Q[7]) which is driven by a register (camera_init/cnt_reg_rep[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#11 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRBWRADDR[4] (net: camera_init/ov5640_init_table_rgb_inst/Q[0]) which is driven by a register (camera_init/cnt_reg_rep[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#12 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRBWRADDR[5] (net: camera_init/ov5640_init_table_rgb_inst/Q[1]) which is driven by a register (camera_init/cnt_reg_rep[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#13 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRBWRADDR[6] (net: camera_init/ov5640_init_table_rgb_inst/Q[2]) which is driven by a register (camera_init/cnt_reg_rep[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#14 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRBWRADDR[7] (net: camera_init/ov5640_init_table_rgb_inst/Q[3]) which is driven by a register (camera_init/cnt_reg_rep[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#15 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRBWRADDR[8] (net: camera_init/ov5640_init_table_rgb_inst/Q[4]) which is driven by a register (camera_init/cnt_reg_rep[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#16 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ADDRBWRADDR[9] (net: camera_init/ov5640_init_table_rgb_inst/Q[5]) which is driven by a register (camera_init/cnt_reg_rep[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#17 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ENARDEN (net: camera_init/ov5640_init_table_rgb_inst/q_reg_ENARDEN_cooolgate_en_sig_1) which is driven by a register (camera_init/i2c_control/i2c_bit_shift/Trans_Done_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#18 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ENARDEN (net: camera_init/ov5640_init_table_rgb_inst/q_reg_ENARDEN_cooolgate_en_sig_1) which is driven by a register (camera_init/i2c_control/state_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#19 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ENARDEN (net: camera_init/ov5640_init_table_rgb_inst/q_reg_ENARDEN_cooolgate_en_sig_1) which is driven by a register (camera_init/i2c_control/state_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#20 Warning
+RAMB18 async control check  
+The RAMB18E1 camera_init/ov5640_init_table_rgb_inst/q_reg has an input control pin camera_init/ov5640_init_table_rgb_inst/q_reg/ENARDEN (net: camera_init/ov5640_init_table_rgb_inst/q_reg_ENARDEN_cooolgate_en_sig_1) which is driven by a register (camera_init/i2c_control/state_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+RPBF-3#1 Warning
+IO port buffering is incomplete  
+Device port eth_mdio expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

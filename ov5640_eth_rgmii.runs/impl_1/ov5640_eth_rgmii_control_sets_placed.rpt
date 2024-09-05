@@ -1,0 +1,98 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Apr 15 21:30:00 2024
+| Host         : DESKTOP-5JNUKTK running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file ov5640_eth_rgmii_control_sets_placed.rpt
+| Design       : ov5640_eth_rgmii
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    27 |
+| Unused register locations in slices containing registers |    64 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            2 |
+|      3 |            1 |
+|      5 |            4 |
+|      7 |            2 |
+|      8 |            4 |
+|     12 |            1 |
+|     14 |            1 |
+|    16+ |           12 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              75 |           24 |
+| No           | No                    | Yes                    |             176 |           63 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               1 |            1 |
+| Yes          | No                    | Yes                    |             188 |           63 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+|            Clock Signal           |                       Enable Signal                       |                     Set/Reset Signal                     | Slice Load Count | Bel Load Count |
++-----------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+|  pll/inst/clk_out2                |                                                           |                                                          |                1 |              1 |
+|  pll/inst/clk_out2                | camera_init/i2c_control/i2c_bit_shift/i2c_sclk0_out       |                                                          |                1 |              1 |
+|  phy_reg_config_inst/eth_mdc_OBUF |                                                           | phy_reg_config_inst/mdio_bit_shift_inst/state[7]_i_3_n_0 |                3 |              3 |
+|  pll/inst/clk_out1                | eth_udp_send/cnt_ip_header                                | camera_init/Init_Done_reg_0                              |                2 |              5 |
+|  pll/inst/clk_out2                | camera_init/i2c_control/i2c_bit_shift/cnt                 | camera_init/i2c_control/i2c_bit_shift/bbstub_locked      |                3 |              5 |
+|  pll/inst/clk_out2                | camera_init/i2c_control/i2c_bit_shift/E[0]                | camera_init/i2c_control/i2c_bit_shift/bbstub_locked      |                2 |              5 |
+|  phy_reg_config_inst/eth_mdc_OBUF | phy_reg_config_inst/mdio_bit_shift_inst/cnt               | phy_reg_config_inst/mdio_bit_shift_inst/state[7]_i_3_n_0 |                2 |              5 |
+|  pll/inst/clk_out2                | camera_init/i2c_control/i2c_bit_shift/state[6]_i_1__0_n_0 | camera_init/i2c_control/i2c_bit_shift/bbstub_locked      |                5 |              7 |
+| ~phy_reg_config_inst/eth_mdc_OBUF |                                                           |                                                          |                2 |              7 |
+|  pll/inst/clk_out1                | eth_udp_send/GMII_TXD_reg__0                              | camera_init/Init_Done_reg_0                              |                5 |              8 |
+|  pll/inst/clk_out1                | eth_udp_send/delay_cnt                                    | camera_init/Init_Done_reg_0                              |                2 |              8 |
+|  pll/inst/clk_out2                | camera_init/i2c_control/Tx_DATA                           | camera_init/i2c_control/i2c_bit_shift/bbstub_locked      |                4 |              8 |
+|  phy_reg_config_inst/eth_mdc_OBUF | phy_reg_config_inst/mdio_bit_shift_inst/state[7]_i_1_n_0  | phy_reg_config_inst/mdio_bit_shift_inst/state[7]_i_3_n_0 |                3 |              8 |
+|  pll/inst/clk_out1                | eth_udp_send/cnt_data                                     | camera_init/Init_Done_reg_0                              |                3 |             12 |
+|  pll/inst/clk_out2                |                                                           | phy_reg_config_inst/cnt[20]_i_2_n_0                      |                3 |             14 |
+|  pll/inst/clk_out2                | camera_init/i2c_control/E[0]                              | camera_init/i2c_control/i2c_bit_shift/bbstub_locked      |                3 |             16 |
+|  camera_pclk_IBUF_BUFG            | camera_eth_formator/Vcnt                                  | camera_init/i2c_control/i2c_bit_shift/bbstub_locked      |                4 |             16 |
+|  pll/inst/clk_out2                | phy_reg_config_inst/cnt[20]_i_1_n_0                       | phy_reg_config_inst/cnt[20]_i_2_n_0                      |                6 |             21 |
+|  camera_pclk_IBUF_BUFG            |                                                           | camera_init/i2c_control/i2c_bit_shift/bbstub_locked      |                9 |             26 |
+|  camera_pclk_IBUF_BUFG            |                                                           | camera_eth_formator/fifo_aclr                            |                8 |             29 |
+|  pll/inst/clk_out1                |                                                           | camera_eth_formator/fifo_aclr                            |                8 |             30 |
+|  camera_pclk_IBUF_BUFG            |                                                           |                                                          |               10 |             30 |
+|  pll/inst/clk_out1                |                                                           | camera_init/Init_Done_reg_0                              |               14 |             31 |
+|  pll/inst/clk_out1                | eth_udp_send/crc_en_reg_n_0                               | eth_udp_send/crc32_d8/crc_result_o[31]_i_2_n_0           |               14 |             32 |
+|  pll/inst/clk_out2                | camera_init/i2c_control/dly_cnt_0                         | camera_init/i2c_control/i2c_bit_shift/bbstub_locked      |                5 |             32 |
+|  pll/inst/clk_out1                |                                                           |                                                          |               11 |             37 |
+|  pll/inst/clk_out2                |                                                           | camera_init/i2c_control/i2c_bit_shift/bbstub_locked      |               18 |             43 |
++-----------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+
+

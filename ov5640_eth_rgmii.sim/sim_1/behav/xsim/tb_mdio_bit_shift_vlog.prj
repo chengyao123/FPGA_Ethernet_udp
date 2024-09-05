@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../ov5640_eth_rgmii.srcs/sources_1/new/mdio/mdio_ bit_shift.v" \
+"../../../../ov5640_eth_rgmii.srcs/sources_1/new/mdio/tb_mdio_bit_shift.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

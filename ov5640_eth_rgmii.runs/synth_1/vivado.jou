@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Apr 15 21:28:26 2024
+# Process ID: 10348
+# Current directory: F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.runs/synth_1
+# Command line: vivado.exe -log ov5640_eth_rgmii.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ov5640_eth_rgmii.tcl
+# Log file: F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.runs/synth_1/ov5640_eth_rgmii.vds
+# Journal file: F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ov5640_eth_rgmii.tcl -notrace

@@ -1,0 +1,1039 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Apr 15 21:28:26 2024
+# Process ID: 10348
+# Current directory: F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.runs/synth_1
+# Command line: vivado.exe -log ov5640_eth_rgmii.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ov5640_eth_rgmii.tcl
+# Log file: F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.runs/synth_1/ov5640_eth_rgmii.vds
+# Journal file: F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ov5640_eth_rgmii.tcl -notrace
+Command: synth_design -top ov5640_eth_rgmii -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 25520 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 469.418 ; gain = 95.078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ov5640_eth_rgmii' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/top/ov5640_eth_rgmii.v:1]
+	Parameter RGB bound to: 0 - type: integer 
+	Parameter JPEG bound to: 1 - type: integer 
+	Parameter IMAGE_WIDTH bound to: 1280 - type: integer 
+	Parameter IMAGE_HEIGHT bound to: 720 - type: integer 
+	Parameter IMAGE_FLIP bound to: 0 - type: integer 
+	Parameter IMAGE_MIRROR bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pll' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.runs/synth_1/.Xil/Vivado-10348-DESKTOP-5JNUKTK/realtime/pll_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'pll' (1#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.runs/synth_1/.Xil/Vivado-10348-DESKTOP-5JNUKTK/realtime/pll_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'phy_reg_config' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/mdio/phy_reg_config.v:21]
+	Parameter speed bound to: 2'b10 
+	Parameter SYS_CLOCK bound to: 50000000 - type: integer 
+	Parameter MDC_CLOCK bound to: 2000 - type: integer 
+	Parameter MAX_CNT bound to: 2 - type: integer 
+	Parameter MDC_CNT_M bound to: 6249 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mdio_bit_shift' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/mdio/mdio_ bit_shift.v:21]
+	Parameter IDLE bound to: 8'b00000001 
+	Parameter PRE bound to: 8'b00000010 
+	Parameter ST bound to: 8'b00000100 
+	Parameter OP bound to: 8'b00001000 
+	Parameter PHYAD bound to: 8'b00010000 
+	Parameter REGAD bound to: 8'b00100000 
+	Parameter TA bound to: 8'b01000000 
+	Parameter DATA bound to: 8'b10000000 
+INFO: [Synth 8-6155] done synthesizing module 'mdio_bit_shift' (2#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/mdio/mdio_ bit_shift.v:21]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/mdio/phy_reg_config.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'phy_reg_config' (3#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/mdio/phy_reg_config.v:21]
+WARNING: [Synth 8-350] instance 'phy_reg_config_inst' of module 'phy_reg_config' requires 7 connections, but only 6 given [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/top/ov5640_eth_rgmii.v:44]
+INFO: [Synth 8-6157] synthesizing module 'camera_init' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_init/camera_init.v:6]
+	Parameter CAMERA_TYPE bound to: ov5640 - type: string 
+	Parameter IMAGE_TYPE bound to: 0 - type: integer 
+	Parameter IMAGE_WIDTH bound to: 1280 - type: integer 
+	Parameter IMAGE_HEIGHT bound to: 720 - type: integer 
+	Parameter IMAGE_FLIP_EN bound to: 0 - type: integer 
+	Parameter IMAGE_MIRROR_EN bound to: 0 - type: integer 
+	Parameter RGB bound to: 0 - type: integer 
+	Parameter JPEG bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ov5640_init_table_rgb' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_init/ov5640_init_table_rgb.v:6]
+	Parameter DATA_WIDTH bound to: 24 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter IMAGE_WIDTH bound to: 1280 - type: integer 
+	Parameter IMAGE_HEIGHT bound to: 720 - type: integer 
+	Parameter IMAGE_FLIP_EN bound to: 0 - type: integer 
+	Parameter IMAGE_MIRROR_EN bound to: 0 - type: integer 
+	Parameter IMAGE_FLIP_DAT bound to: 8'b01000000 
+	Parameter IMAGE_MIRROR_DAT bound to: 4'b0111 
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_init_table_rgb' (4#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_init/ov5640_init_table_rgb.v:6]
+INFO: [Synth 8-6157] synthesizing module 'i2c_control' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_init/i2c_control/i2c_control.v:6]
+	Parameter SYS_CLOCK bound to: 50000000 - type: integer 
+	Parameter SCL_CLOCK bound to: 400000 - type: integer 
+	Parameter WR bound to: 6'b000001 
+	Parameter STA bound to: 6'b000010 
+	Parameter RD bound to: 6'b000100 
+	Parameter STO bound to: 6'b001000 
+	Parameter ACK bound to: 6'b010000 
+	Parameter NACK bound to: 6'b100000 
+	Parameter IDLE bound to: 8'b00000001 
+	Parameter WR_REG bound to: 8'b00000010 
+	Parameter WAIT_WR_DONE bound to: 8'b00000100 
+	Parameter WR_REG_DONE bound to: 8'b00001000 
+	Parameter RD_REG bound to: 8'b00010000 
+	Parameter WAIT_RD_DONE bound to: 8'b00100000 
+	Parameter RD_REG_DONE bound to: 8'b01000000 
+	Parameter WAIT_DLY bound to: 8'b10000000 
+INFO: [Synth 8-6157] synthesizing module 'i2c_bit_shift' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_init/i2c_control/i2c_bit_shift.v:1]
+	Parameter SYS_CLOCK bound to: 50000000 - type: integer 
+	Parameter SCL_CLOCK bound to: 400000 - type: integer 
+	Parameter SCL_CNT_M bound to: 30 - type: integer 
+	Parameter WR bound to: 6'b000001 
+	Parameter STA bound to: 6'b000010 
+	Parameter RD bound to: 6'b000100 
+	Parameter STO bound to: 6'b001000 
+	Parameter ACK bound to: 6'b010000 
+	Parameter NACK bound to: 6'b100000 
+	Parameter IDLE bound to: 8'b00000001 
+	Parameter GEN_STA bound to: 8'b00000010 
+	Parameter WR_DATA bound to: 8'b00000100 
+	Parameter RD_DATA bound to: 8'b00001000 
+	Parameter CHECK_ACK bound to: 8'b00010000 
+	Parameter GEN_ACK bound to: 8'b00100000 
+	Parameter GEN_STO bound to: 8'b01000000 
+INFO: [Synth 8-226] default block is never used [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_init/i2c_control/i2c_bit_shift.v:132]
+INFO: [Synth 8-226] default block is never used [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_init/i2c_control/i2c_bit_shift.v:193]
+WARNING: [Synth 8-5788] Register i2c_sclk_reg in module i2c_bit_shift is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_init/i2c_control/i2c_bit_shift.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_bit_shift' (5#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_init/i2c_control/i2c_bit_shift.v:1]
+WARNING: [Synth 8-5788] Register RW_Done_reg in module i2c_control is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_init/i2c_control/i2c_control.v:98]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_control' (6#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_init/i2c_control/i2c_control.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'camera_init' (7#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_init/camera_init.v:6]
+INFO: [Synth 8-6157] synthesizing module 'camera_eth_formator' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_eth/camera_eth_formator.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'camera_eth_formator' (8#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/camera_eth/camera_eth_formator.v:21]
+INFO: [Synth 8-6157] synthesizing module 'eth_udp_send' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/eth_udp_send.v:2]
+	Parameter FRAME_TYPE bound to: 16'b0000100000000000 
+	Parameter IDLE bound to: 10'b0000000001 
+	Parameter SEND_HEADER bound to: 10'b0000000010 
+	Parameter SEND_DES_MAC bound to: 10'b0000000100 
+	Parameter SEND_SRC_MAC bound to: 10'b0000001000 
+	Parameter SEND_FRAME_TYPE bound to: 10'b0000010000 
+	Parameter SEND_IP_HEADER bound to: 10'b0000100000 
+	Parameter SEND_UDP_HEADER bound to: 10'b0001000000 
+	Parameter SEND_DATA bound to: 10'b0010000000 
+	Parameter SEND_CRC bound to: 10'b0100000000 
+INFO: [Synth 8-6157] synthesizing module 'async_fifo' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/async_fifo.v:1]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter FULL_AHEAD bound to: 1 - type: integer 
+	Parameter SHOWAHEAD_EN bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'async_fifo_ctrl' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/async_fifo_ctrl.v:1]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter FULL_AHEAD bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'async_fifo_ctrl' (9#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/async_fifo_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dpram' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/dpram.v:1]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 13 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/dpram.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dpram' (10#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/dpram.v:1]
+WARNING: [Synth 8-6014] Unused sequential element rddata_tmp_latch_reg was removed.  [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/async_fifo.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'async_fifo' (11#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/async_fifo.v:1]
+WARNING: [Synth 8-689] width (12) of port connection 'wrusedw' does not match port width (14) of module 'async_fifo' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/eth_udp_send.v:103]
+WARNING: [Synth 8-689] width (12) of port connection 'rdusedw' does not match port width (14) of module 'async_fifo' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/eth_udp_send.v:109]
+INFO: [Synth 8-6157] synthesizing module 'crc32_d8' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/crc32_d8.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'crc32_d8' (12#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/crc32_d8.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'eth_udp_send' (13#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/eth_udp_send.v:2]
+WARNING: [Synth 8-689] width (13) of port connection 'wrusedw' does not match port width (12) of module 'eth_udp_send' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/top/ov5640_eth_rgmii.v:125]
+INFO: [Synth 8-6157] synthesizing module 'gmii_to_rgmii' [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/gmii_to_rgmii/gmii_to_rgmii.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ODDR' [E:/FPGA/Vivado/Vivado/2018.3/scripts/rt/data/unisim_comp.v:31641]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'ODDR' (14#1) [E:/FPGA/Vivado/Vivado/2018.3/scripts/rt/data/unisim_comp.v:31641]
+INFO: [Synth 8-6155] done synthesizing module 'gmii_to_rgmii' (15#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/gmii_to_rgmii/gmii_to_rgmii.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_eth_rgmii' (16#1) [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/top/ov5640_eth_rgmii.v:1]
+WARNING: [Synth 8-3331] design eth_udp_send has unconnected port Clk
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 527.594 ; gain = 153.254
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin crc32_d8:crc_init to constant 0 [F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/new/eth_rgmii/eth_udp_send.v:198]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 527.594 ; gain = 153.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 527.594 ; gain = 153.254
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/ip/pll/pll/pll_in_context.xdc] for cell 'pll'
+Finished Parsing XDC File [f:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/ip/pll/pll/pll_in_context.xdc] for cell 'pll'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 903.910 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 903.910 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 903.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 903.910 ; gain = 529.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 903.910 ; gain = 529.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  f:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/ip/pll/pll/pll_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  f:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.srcs/sources_1/ip/pll/pll/pll_in_context.xdc, line 6).
+Applied set_property DONT_TOUCH = true for pll. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 903.910 ; gain = 529.570
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mdio_bit_shift'
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'phy_reg_config'
+INFO: [Synth 8-5544] ROM "reg_data" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mdio_data" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'i2c_bit_shift'
+INFO: [Synth 8-5546] ROM "Rx_DATA" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_sdat_oe" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_sdat_oe" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_sdat_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_sdat_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Trans_Done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ack_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_sclk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_sclk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_sclk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_sclk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "en_div_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'i2c_control'
+INFO: [Synth 8-5546] ROM "Cmd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Cmd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Tx_DATA" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "dly_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rddata" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'camera_init'
+INFO: [Synth 8-5546] ROM "Init_Done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_dly_cnt_max" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Go" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Go" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "i2c_dly_cnt_max" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wrreg_req" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "Go" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Vcnt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'ctrl_state_reg' in module 'eth_udp_send'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'eth_udp_send'
+INFO: [Synth 8-5546] ROM "GMII_TXD_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "delay_cnt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Go" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ctrl_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ctrl_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "crc_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "GMII_TXEN_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "GMII_TXD_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt_crc" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt_udp_header" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt_ip_header" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt_frame_type" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt_src_mac" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt_des_mac" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt_header" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                         00000001 |                         00000001
+                     PRE |                         00000010 |                         00000010
+                      ST |                         00000100 |                         00000100
+                      OP |                         00001000 |                         00001000
+                   PHYAD |                         00010000 |                         00010000
+                   REGAD |                         00100000 |                         00100000
+                      TA |                         01000000 |                         01000000
+                    DATA |                         10000000 |                         10000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'mdio_bit_shift'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                                0 |                               00
+                 iSTATE0 |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'phy_reg_config'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                         00000001 |                         00000001
+                 GEN_STA |                         00000010 |                         00000010
+                 WR_DATA |                         00000100 |                         00000100
+               CHECK_ACK |                         00010000 |                         00010000
+                 RD_DATA |                         00001000 |                         00001000
+                 GEN_ACK |                         00100000 |                         00100000
+                 GEN_STO |                         01000000 |                         01000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'i2c_bit_shift'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                         00000001 |                         00000001
+                  WR_REG |                         00000010 |                         00000010
+            WAIT_WR_DONE |                         00000100 |                         00000100
+             WR_REG_DONE |                         00001000 |                         00001000
+                  RD_REG |                         00010000 |                         00010000
+            WAIT_RD_DONE |                         00100000 |                         00100000
+             RD_REG_DONE |                         01000000 |                         01000000
+                WAIT_DLY |                         10000000 |                         10000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'i2c_control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+                 iSTATE1 |                               01 |                               01
+                 iSTATE0 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'camera_init'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+                 iSTATE0 |                               01 |                               01
+                 iSTATE1 |                               10 |                               10
+                 iSTATE2 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ctrl_state_reg' using encoding 'sequential' in module 'eth_udp_send'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                       0000000001 |                       0000000001
+             SEND_HEADER |                       0000000010 |                       0000000010
+            SEND_DES_MAC |                       0000000100 |                       0000000100
+            SEND_SRC_MAC |                       0000001000 |                       0000001000
+         SEND_FRAME_TYPE |                       0000010000 |                       0000010000
+          SEND_IP_HEADER |                       0000100000 |                       0000100000
+         SEND_UDP_HEADER |                       0001000000 |                       0001000000
+               SEND_DATA |                       0010000000 |                       0010000000
+                SEND_CRC |                       0100000000 |                       0100000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'eth_udp_send'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 903.910 ; gain = 529.570
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     21 Bit       Adders := 2     
+	   9 Input     20 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 3     
+	   2 Input     14 Bit       Adders := 2     
+	   3 Input     14 Bit       Adders := 3     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 8     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 2     
++---XORs : 
+	   2 Input     14 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 44    
+	   3 Input      1 Bit         XORs := 4     
+	   4 Input      1 Bit         XORs := 3     
+	   5 Input      1 Bit         XORs := 10    
+	   6 Input      1 Bit         XORs := 7     
+	   8 Input      1 Bit         XORs := 3     
+	   7 Input      1 Bit         XORs := 3     
+	   9 Input      1 Bit         XORs := 2     
++---Registers : 
+	               48 Bit    Registers := 2     
+	               32 Bit    Registers := 12    
+	               25 Bit    Registers := 1     
+	               24 Bit    Registers := 2     
+	               22 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
+	               20 Bit    Registers := 2     
+	               16 Bit    Registers := 4     
+	               14 Bit    Registers := 6     
+	                8 Bit    Registers := 10    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 7     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 30    
++---RAMs : 
+	              64K Bit         RAMs := 1     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   9 Input     32 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   9 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 1     
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 16    
+	   9 Input      8 Bit        Muxes := 5     
+	   4 Input      8 Bit        Muxes := 3     
+	   6 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	  10 Input      8 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 3     
+	   6 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   4 Input      6 Bit        Muxes := 1     
+	   6 Input      6 Bit        Muxes := 1     
+	   9 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 13    
+	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   7 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 38    
+	   9 Input      1 Bit        Muxes := 19    
+	   4 Input      1 Bit        Muxes := 20    
+	   8 Input      1 Bit        Muxes := 13    
+	   6 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 5     
+	  10 Input      1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module mdio_bit_shift 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   9 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   9 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
+	   9 Input      1 Bit        Muxes := 8     
+Module phy_reg_config 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               25 Bit    Registers := 1     
+	               22 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module ov5640_init_table_rgb 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module i2c_bit_shift 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	               20 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 16    
+	   4 Input      1 Bit        Muxes := 15    
+	   8 Input      1 Bit        Muxes := 13    
+Module i2c_control 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   9 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   4 Input      8 Bit        Muxes := 2     
+	   6 Input      8 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 3     
+	   6 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   4 Input      6 Bit        Muxes := 1     
+	   6 Input      6 Bit        Muxes := 1     
+	   9 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 11    
+Module camera_init 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 4     
+Module camera_eth_formator 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module async_fifo_ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 2     
+	   3 Input     14 Bit       Adders := 3     
++---XORs : 
+	   2 Input     14 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 26    
++---Registers : 
+	               14 Bit    Registers := 6     
+	                1 Bit    Registers := 4     
+Module dpram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	              64K Bit         RAMs := 1     
+Module crc32_d8 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 17    
+	   3 Input      1 Bit         XORs := 4     
+	   4 Input      1 Bit         XORs := 3     
+	   5 Input      1 Bit         XORs := 10    
+	   6 Input      1 Bit         XORs := 7     
+	   8 Input      1 Bit         XORs := 3     
+	   7 Input      1 Bit         XORs := 3     
+	   9 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module eth_udp_send 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   9 Input     20 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 6     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               48 Bit    Registers := 2     
+	               32 Bit    Registers := 9     
+	               16 Bit    Registers := 3     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 6     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 9     
+	   3 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	  10 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 7     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 16    
+	   2 Input      1 Bit        Muxes := 1     
+Module gmii_to_rgmii 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "mdio_bit_shift_inst/state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_control/i2c_bit_shift/state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_control/i2c_bit_shift/Trans_Done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_control/i2c_bit_shift/i2c_sdat_oe" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_control/i2c_bit_shift/Rx_DATA" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_control/state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_control/state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Go" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i2c_dly_cnt_max" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "GMII_TXD_reg" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-3331] design eth_udp_send has unconnected port Clk
+INFO: [Synth 8-4652] Swapped enable and write-enable on 2 RAM instances of RAM eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg to conserve power
+INFO: [Synth 8-3886] merging instance 'camera_init/i2c_dly_cnt_max_reg[0]' (FDCE) to 'camera_init/i2c_dly_cnt_max_reg[31]'
+INFO: [Synth 8-3886] merging instance 'camera_init/i2c_dly_cnt_max_reg[1]' (FDCE) to 'camera_init/i2c_dly_cnt_max_reg[31]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[4]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[12]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[20]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[28]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[4]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[12]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[20]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[28]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[4]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[12]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[4]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[12]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[0]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[8]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[16]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[24]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[0]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[8]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[16]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[24]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[0]' (FDE) to 'eth_udp_send/src_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[8]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[0]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[8]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[5]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[13]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[21]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[29]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[5]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[13]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[21]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[29]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[5]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[13]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[5]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[13]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[1]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[9]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[17]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[25]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[1]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[9]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[17]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[25]' (FDE) to 'eth_udp_send/src_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[1]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[9]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[1]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[9]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[6]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[14]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[22]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[30]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[6]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[14]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[22]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[30]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[6]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[14]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[6]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[14]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[2]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[10]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[18]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[26]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[2]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[10]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[18]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[26]' (FDE) to 'eth_udp_send/src_port_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[2]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[10]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[2]' (FDE) to 'eth_udp_send/src_port_reg_reg[10]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[10]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[7]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[15]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[23]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[31]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[7]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[15]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[23]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[31]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[7]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[15]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[7]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[15]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[3]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[11]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[19]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_ip_reg_reg[27]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[3]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[11]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[19]' (FDE) to 'eth_udp_send/src_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_ip_reg_reg[27]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[3]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/des_port_reg_reg[11]' (FDE) to 'eth_udp_send/src_port_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[3]' (FDE) to 'eth_udp_send/src_mac_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/src_port_reg_reg[11]' (FDE) to 'eth_udp_send/src_mac_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/data_length_reg_reg[0]' (FDE) to 'eth_udp_send/src_mac_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send/data_length_reg_reg[1]' (FDE) to 'eth_udp_send/src_mac_reg_reg[6]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\camera_init/i2c_dly_cnt_max_reg[31] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\eth_udp_send/ip_header_reg[0][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\eth_udp_send/src_mac_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\eth_udp_send/src_mac_reg_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\eth_udp_send/udp_header_reg[1][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\eth_udp_send/state_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\camera_init/i2c_control/cnt_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\camera_init/i2c_control/Cmd_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\phy_reg_config_inst/mdio_data_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\phy_reg_config_inst/mdio_data_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\camera_init/i2c_control/i2c_bit_shift/state_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\phy_reg_config_inst/div_cnt_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\phy_reg_config_inst/cnt_reg[24] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\eth_udp_send/udp_header_reg[0][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\eth_udp_send/udp_header_reg[0][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\eth_udp_send/ip_header_reg[2][12] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\eth_udp_send/ip_header_reg[2][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\eth_udp_send/udp_header_reg[1][18] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\eth_udp_send/udp_header_reg[1][19] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\eth_udp_send/ip_header_reg[2][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\eth_udp_send/ip_header_reg[2][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\eth_udp_send/ip_header_reg[2][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\eth_udp_send/ip_header_reg[2][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_30/\eth_udp_send/cnt_des_mac_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_30/\eth_udp_send/cnt_header_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_30/\eth_udp_send/cnt_crc_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_30/\eth_udp_send/cnt_src_mac_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_30/\eth_udp_send/cnt_udp_header_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\phy_reg_config_inst/mdio_bit_shift_inst/cnt_reg[5] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 903.910 ; gain = 529.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+----------------------------------+---------------+----------------+
+|Module Name | RTL Object                       | Depth x Width | Implemented As | 
++------------+----------------------------------+---------------+----------------+
+|camera_init | ov5640_init_table_rgb_inst/q_reg | 256x24        | Block RAM      | 
++------------+----------------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|dpram:      | use_bram.ram_reg | 8 K x 8(NO_CHANGE)     | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_58/camera_init/ov5640_init_table_rgb_inst/q_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_58/camera_init/ov5640_init_table_rgb_inst/q_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_79/eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_79/eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'pll/clk_out1' to pin 'pll/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'pll/clk_out2' to pin 'pll/bbstub_clk_out2/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'pll/clk_out3' to pin 'pll/bbstub_clk_out3/O'
+INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 903.910 ; gain = 529.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 941.797 ; gain = 567.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|dpram:      | use_bram.ram_reg | 8 K x 8(NO_CHANGE)     | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance camera_init/ov5640_init_table_rgb_inst/q_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance camera_init/ov5640_init_table_rgb_inst/q_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance eth_udp_send/async_fifo/dpram_inst/use_bram.ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 942.824 ; gain = 568.484
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 942.824 ; gain = 568.484
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 942.824 ; gain = 568.484
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 942.824 ; gain = 568.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 942.824 ; gain = 568.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 942.824 ; gain = 568.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 942.824 ; gain = 568.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |pll           |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |pll      |     1|
+|2     |BUFG     |     1|
+|3     |CARRY4   |    59|
+|4     |LUT1     |    11|
+|5     |LUT2     |   151|
+|6     |LUT3     |   100|
+|7     |LUT4     |    80|
+|8     |LUT5     |    72|
+|9     |LUT6     |   189|
+|10    |ODDR     |     6|
+|11    |RAMB18E1 |     1|
+|12    |RAMB36E1 |     2|
+|13    |FDCE     |   321|
+|14    |FDPE     |    43|
+|15    |FDRE     |    76|
+|16    |IBUF     |    12|
+|17    |IOBUF    |     1|
+|18    |OBUF     |    10|
+|19    |OBUFT    |     1|
++------+---------+------+
+
+Report Instance Areas: 
++------+-------------------------------+----------------------+------+
+|      |Instance                       |Module                |Cells |
++------+-------------------------------+----------------------+------+
+|1     |top                            |                      |  1140|
+|2     |  camera_eth_formator          |camera_eth_formator   |    85|
+|3     |  camera_init                  |camera_init           |   335|
+|4     |    i2c_control                |i2c_control           |   232|
+|5     |      i2c_bit_shift            |i2c_bit_shift         |   100|
+|6     |    ov5640_init_table_rgb_inst |ov5640_init_table_rgb |     9|
+|7     |  eth_udp_send                 |eth_udp_send          |   528|
+|8     |    async_fifo                 |async_fifo            |   230|
+|9     |      async_fifo_ctrl_inst     |async_fifo_ctrl       |   222|
+|10    |      dpram_inst               |dpram                 |     8|
+|11    |    crc32_d8                   |crc32_d8              |   104|
+|12    |  gmii_to_rgmii                |gmii_to_rgmii         |     7|
+|13    |  phy_reg_config_inst          |phy_reg_config        |   156|
+|14    |    mdio_bit_shift_inst        |mdio_bit_shift        |    78|
++------+-------------------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 942.824 ; gain = 568.484
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 942.824 ; gain = 192.168
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 942.824 ; gain = 568.484
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 69 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 942.824 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+280 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 942.824 ; gain = 579.973
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 942.824 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'F:/F_prj/ov5640_eth_rgmii/ov5640_eth_rgmii.runs/synth_1/ov5640_eth_rgmii.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ov5640_eth_rgmii_utilization_synth.rpt -pb ov5640_eth_rgmii_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 15 21:29:03 2024...
